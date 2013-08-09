@@ -8,64 +8,35 @@ block content
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href='#') Project name
+            a.navbar-brand(href='#') Teach Hub
             .nav-collapse.collapse
               ul.nav.navbar-nav
                 li.active
-                  a(href='#') Home
+                  a(href='/') Home
                 li
-                  a(href='#about') About
+                  a(href='/about') About
                 li
-                  a(href='#contact') Contact
-                li.dropdown
-                  a.dropdown-toggle(href='#', data-toggle='dropdown')
-                    | Dropdown
-                    b.caret
-                  ul.dropdown-menu
-                    li
-                      a(href='#') Action
-                    li
-                      a(href='#') Another action
-                    li
-                      a(href='#') Something else here
-                    li.divider
-                    li.nav-header Nav header
-                    li
-                      a(href='#') Separated link
-                    li
-                      a(href='#') One more separated link
+                  a(href='/contact') Contact
     #myCarousel.carousel.slide
       ol.carousel-indicators
         li.active(data-target='#myCarousel', data-slide-to='0')
         li(data-target='#myCarousel', data-slide-to='1')
-        li(data-target='#myCarousel', data-slide-to='2')
       .carousel-inner
         .item.active
           img(src='images/intro.jpg', alt='')
-          .container
-            .carousel-caption
-              h1 Teach Hub
-              p Online listing of supply teachers. Schools can search for supply teachers by location and subject. We remove the middlemen of the supply industry.
-              p
-                a.btn.btn-large.btn-primary(href='/teacher/signup') Sign up today
+          .carousel-caption
+            h1 Teachers
+            p Online listing of supply teachers. Schools can search for supply teachers by location and subject. We remove the middlemen of the supply industry.
+            p
+              a.btn.btn-large.btn-primary(href='/teacher/signup') Sign up today
         .item
-          img(data-src='holder.js/1500x500/auto/#777:#7a7a7a/text:Second slide', alt='')
+          img(src='/images/intro2.png', alt='')
           .container
             .carousel-caption
               h1 Schools
+              p Search our live teacher listings to find the right teacher for you and contact them immediately.
               p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              p
-                a.btn.btn-large.btn-primary(href='#') Learn more
-        .item
-          img(data-src='holder.js/1500x500/auto/#777:#7a7a7a/text:Third slide', alt='')
-          .container
-            .carousel-caption
-              h1 Transparency
-              p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              p
-                a.btn.btn-large.btn-primary(href='#') Browse gallery
+                a.btn.btn-large.btn-primary(href='#') Search Now
       a.left.carousel-control(href='#myCarousel', data-slide='prev')
         span.glyphicon.glyphicon-chevron-left
       a.right.carousel-control(href='#myCarousel', data-slide='next')
