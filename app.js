@@ -36,6 +36,9 @@ app.get('/teacher/signup', teacher.signup);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 
+app.get('/thanks', teacher.thanks);
+
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
