@@ -1,14 +1,5 @@
-!!! 5
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='description', content='')
-    meta(name='author', content='')
-    title Carousel Template for Bootstrap
-    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
-    link(href='stylesheets/carousel.css', rel='stylesheet')
-  body
+extends layout
+block content
     .navbar-wrapper
       .container
         .navbar.navbar-inverse.navbar-static-top
@@ -136,6 +127,3 @@ html(lang='en')
           a(href='#') Privacy
           | ·
           a(href='#') Terms
-    script(src='../assets/js/jquery.js')
-    script(src='../dist/js/bootstrap.js')
-    script(src='../assets/js/holder.js')
