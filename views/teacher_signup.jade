@@ -133,7 +133,12 @@ block content
             div.form-group
               label(for="level", class="col-lg-2 control-label") Level capable of teaching to (state all)
               .col-lg-5
-                input(type="level", class="form-control", id="level", placeholder="Primary/Secondary/Plus 16", name="level", required)
+                input(type="checkbox", name="level", value="Primary")
+                | &nbsp; Primary&nbsp; &nbsp; &nbsp; 
+                input(type="checkbox", name="level", value="Secondary")
+                | &nbsp; Secondary&nbsp; &nbsp; &nbsp; 
+                input(type="checkbox", name="level", value="16")
+                | &nbsp; 16 +&nbsp; &nbsp; &nbsp; 
             input(type="submit", name="submit", class="btn btn-default", ) Register
 
         hr.featurette-divider
@@ -142,7 +147,5 @@ block content
           p.pull-right
             a(href='#') Back to top
           p
-            | © 2013 Company, Inc. ·
-            a(href='#') Privacy
-            | ·
-            a(href='#') Terms
+            | © 2013 Teach Hub ·
+
