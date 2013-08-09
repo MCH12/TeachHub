@@ -1,5 +1,22 @@
 extends layout
 block content
+    .navbar-wrapper
+      .container
+        .navbar.navbar-inverse.navbar-static-top
+          .container
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='/') Teach Hub
+            .nav-collapse.collapse
+              ul.nav.navbar-nav
+                li.active
+                  a(href='/') Home
+                li
+                  a(href='/about') About
+                li
+                  a(href='/contact') Contact
     #myCarousel.carousel.slide
       ol.carousel-indicators
         li.active(data-target='#myCarousel', data-slide-to='0')
