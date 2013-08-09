@@ -3,8 +3,8 @@ var nodemailer = require('nodemailer');
 var smtpTransport = nodemailer.createTransport("SMTP", {
 	service: "Gmail",
 	auth: {
-		user: "nicangeli@gmail.com",
-		pass: "h7x22UquBD1@&^ara0S$"
+		user: "teachhubsignup@gmail.com",
+		pass: "teachhub1"
 	}
 });
 
@@ -33,9 +33,23 @@ exports.signedup = function(req, res) {
 		if(error) {
 			console.log(error);
 		} else {
-			console.log('Message sent: ' + response.Message)
+			var private_options = {
+				from: "Teach Hub <teachhubsignup@gmail.com>",
+				to: req.body.email,
+				subject: "Thanks for Signing Up!",
+				text: "Thanks for signing up to Teach Hub. We'll be in contact soon!",
+				html: "<b>Thanks for signing up to Teach Hub. We'll be in contact soon!</b>"
+			};
+			smtpTransport.sendMail(private_options, function(error, response) {
+				console.log('Message sent: ' + response.Message)
+				res.redirect('/thanks');
+			})
+
 		}
 	});
-
 	//smtpTransport.close();
 }
+
+exports.thanks = function(req, res) {
+	res.render('thanks');
+};
