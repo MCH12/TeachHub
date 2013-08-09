@@ -41,8 +41,12 @@ exports.signedup = function(req, res) {
 				html: "<b>Thanks for signing up to Teach Hub. We'll be in contact soon!</b>"
 			};
 			smtpTransport.sendMail(private_options, function(error, response) {
-				console.log('Message sent: ' + response.Message)
-				res.redirect('/thanks');
+				if(error) {
+					console.log('error sending second email');
+				} else {
+					console.log('Message sent:');
+					res.redirect('/thanks');
+				}	
 			})
 
 		}
