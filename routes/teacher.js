@@ -4,5 +4,5 @@
  */
 
 exports.signup = function(req, res){
-  res.send("signing up new teacher");
+  res.render('teacher_signup')
 };
