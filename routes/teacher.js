@@ -1,4 +1,5 @@
-var nodemailer = require('nodemailer');
+var nodemailer = require('nodemailer'),
+	Teacher = require('../models/teacher');
 
 var smtpTransport = nodemailer.createTransport("SMTP", {
 	service: "Gmail",
@@ -33,6 +34,7 @@ exports.signedup = function(req, res) {
 		if(error) {
 			console.log(error);
 		} else {
+			console.log('I am sending emails')
 			var private_options = {
 				from: "Teach Hub <teachhubsignup@gmail.com>",
 				to: req.body.email,
@@ -42,8 +44,11 @@ exports.signedup = function(req, res) {
 			};
 			smtpTransport.sendMail(private_options, function(error, response) {
 				if(error) {
+					throw error;
 					console.log('error sending second email');
 				} else {
+					var myTeacher = new Teacher();
+					myTeacher.save(req.body);
 					console.log('Message sent:');
 					res.redirect('/thanks');
 				}	
