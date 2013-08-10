@@ -9,6 +9,7 @@
     "express": "3.2.0",
     "jade": "*",
     "nodemailer": "0.5.2",
-    "mongoose": "3.6.16"
+    "mongoose": "3.6.16",
+    "twilio": "1.1.4"
   }
 }
