@@ -22,7 +22,7 @@ block content
             | Contact
             span.text-muted &nbsp; Got any questions for us?
             br
-          form.form-horizontal(method="post", action="/teacher/signedup")
+          form.form-horizontal(method="post", action="/sendMessage")
             div.form-group
               label(for="name", class="col-lg-2 control-label") Name
               .col-lg-5
@@ -32,9 +32,9 @@ block content
               .col-lg-5
                 input(type="text", class="form-control", id="email", placeholder="", name="email", required)
             div.form-group
-              label(for="details", class="col-lg-2 control-label") Message
+              label(for="messageText", class="col-lg-2 control-label") Message
               .col-lg-5
-                textarea(type="text", class="form-control", id="details", placeholder="", required, rows="10")
+                textarea(type="text", class="form-control", id="messageText", placeholder="", required, rows="10", name="messageText")
             div.form-group
              label(for="submit", class="col-lg-2 control-label") 
              .col-lg-5
