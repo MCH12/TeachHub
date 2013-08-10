@@ -21,6 +21,10 @@ block content
           h2.featurette-heading
             | Search for a Supply Teacher
           form(method="post", action="/search", class="form-horizontal")
+           .form-group
+              label(for="postcode", class="col-lg-2 control-label") School postcode
+              .col-lg-5
+                input(type="text", class="form-control", id="postcode", placeholder="", name="postcode", required)
             .form-group
               label(for="subject", class="col-lg-2 control-label") Subject 
               .col-lg-5
@@ -70,4 +74,7 @@ block content
                   option Primary
                   option Secondary
                   option Plus 16
-            input(type="submit", name="submit", class="btn btn-default", ) Search
+            .form-group
+              label(for="", class="col-lg-2 control-label")
+              .col-lg-5
+               input(type="submit", name="submit", class="btn btn-default", ) Search
