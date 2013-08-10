@@ -22,4 +22,11 @@ block content
             | Search Results
           -for(var i = 0; i < results.length; i++) {
             h3= results[i].name
+            p= results[i].name
+              | &nbsp;
+              | specializes in teaching &nbsp;
+              span= results[i].primary
+              | &nbsp; and is interested in teaching at your school.
+            form(method="post", action="/call/")
+            button(type="submit", value="Hire Them", class="btn btn-large") Hire Them
           -}
