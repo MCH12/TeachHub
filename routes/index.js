@@ -40,3 +40,8 @@ exports.sendMessage = function(req, res){
 	};
 	smtpTransport.sendMail(mailOptions, function(error, response) {res.redirect('/thanksContact')});
 }
+
+exports.xml = function(req, res) {
+	res.setHeader('Content-Type: text/xml');
+	res.send('<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="woman">Youve been offered a job a job at Southgate School on the 11th of August. Press one to accept and two to decline.</Say></Response>');
+}

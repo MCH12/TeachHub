@@ -44,6 +44,9 @@ app.post('/search', teacher.results);
 app.get('/thanks', teacher.thanks);
 app.post('/call/:number', teacher.call)
 
+app.get('/twilio.xml', routes.xml);
+app.post('/twilio.xml', routes.xml);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
