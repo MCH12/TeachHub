@@ -20,5 +20,22 @@ block content
       .container
           h2.featurette-heading
             | Contact
-          p Got any questions for us?
-          a(href="mailto:teachhubsignup@gmail.com") Email Us!
+            span.text-muted &nbsp; Got any questions for us?
+            br
+          form.form-horizontal(method="post", action="/teacher/signedup")
+            div.form-group
+              label(for="name", class="col-lg-2 control-label") Name
+              .col-lg-5
+                input(type="text", class="form-control", id="name", placeholder="", name="name", required)
+            div.form-group 
+              label(for="email", class="col-lg-2 control-label") Email
+              .col-lg-5
+                input(type="text", class="form-control", id="email", placeholder="", name="email", required)
+            div.form-group
+              label(for="details", class="col-lg-2 control-label") Message
+              .col-lg-5
+                textarea(type="text", class="form-control", id="details", placeholder="", required, rows="10")
+            div.form-group
+             label(for="submit", class="col-lg-2 control-label") 
+             .col-lg-5
+               input(type="submit", name="submit", class="btn btn-default", ) Register
