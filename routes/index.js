@@ -14,7 +14,3 @@ exports.about = function(req, res){
 exports.contact = function(req, res){
 	res.render('contact');
 }
-
-exports.search = function(req, res){
-	res.render('teacher_search');
-}

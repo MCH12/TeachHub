@@ -36,8 +36,8 @@ app.get('/teacher/signup', teacher.signup);
 app.post('/teacher/signedup', teacher.signedup)
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
-app.get('/search', routes.search);
-
+app.get('/search', teacher.search);
+app.post('/search', teacher.results);
 app.get('/thanks', teacher.thanks);
 
 

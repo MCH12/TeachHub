@@ -59,6 +59,21 @@ exports.signedup = function(req, res) {
 	//smtpTransport.close();
 }
 
+exports.search = function(req, res){
+	//var t = new Teacher();
+	//t.search('', '', 'Arabic', function(results) {
+		//res.render('teacher_search', {});
+	//});
+	res.render('teacher_search');
+};
+
+exports.results = function(req, res) {
+	var t = new Teacher();
+	t.search('', '', '', function(results) {
+		res.render('results', {results: results});
+	})
+};
+
 exports.thanks = function(req, res) {
 	res.render('thanks');
 };

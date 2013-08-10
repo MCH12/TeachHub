@@ -36,6 +36,16 @@ module.exports = function() {
 				console.log('Save model to DB');
 			}
 		})
+	}, 
+
+	this.search = function(level, distance, subject, callback) {
+		Teacher.find({}, function(err, results) {
+			if(err) {
+				throw err;
+			} else {
+				callback(results);
+			}
+		})
 	}
 
 }

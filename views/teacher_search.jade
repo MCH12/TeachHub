@@ -20,4 +20,54 @@ block content
       .container
           h2.featurette-heading
             | Search for a Supply Teacher
-          p We are still building our search function. It will be up and running before term starts in September.
+          form(method="post", action="/search", class="form-horizontal")
+            .form-group
+              label(for="subject", class="col-lg-2 control-label") Subject 
+              .col-lg-5
+                select(id="subject", class="form-control", name="subject")
+                  option Arabic
+                  option Art and Design
+                  option Art and Fashion
+                  option Biology
+                  option Business Studies
+                  option Chemistry
+                  option Classical Civillisation
+                  option Computing
+                  option Drama and Theatre Studies
+                  option Economics
+                  option English Literature
+                  option English Language
+                  option Film Studies
+                  option Film and Video
+                  option French
+                  option Graphic Design
+                  option Geography
+                  option German
+                  option Government and Politics
+                  option Graphic Design
+                  option History
+                  option History of Art
+                  option Information Technology
+                  option Japanese
+                  option Latin
+                  option Law
+                  option Mathmatics
+                  option Further Mathmatics
+                  option Modern Languages
+                  option Media Studies
+                  option Philiosophy
+                  option Photography
+                  option Physics
+                  option Psychology
+                  option Religious Studies
+                  option Science
+                  option Sociology
+                  option Spanish
+            .form-group
+              label(for="level", class="col-lg-2 control-label") Level 
+              .col-lg-5
+                select(id="level", class="form-control", name="level")
+                  option Primary
+                  option Secondary
+                  option Plus 16
+            input(type="submit", name="submit", class="btn btn-default", ) Search
