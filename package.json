@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "3.2.0",
     "jade": "*",
-    "nodemailer": "0.5.2"
+    "nodemailer": "0.5.2",
+    "moongoose": "3.6.16"
   }
 }
