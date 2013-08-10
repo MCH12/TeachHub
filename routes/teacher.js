@@ -1,5 +1,6 @@
 var nodemailer = require('nodemailer'),
-	Teacher = require('../models/teacher');
+	Teacher = require('../models/teacher'),
+	call = require('../models/call');
 
 var smtpTransport = nodemailer.createTransport("SMTP", {
 	service: "Gmail",
@@ -73,6 +74,11 @@ exports.results = function(req, res) {
 		res.render('results', {results: results});
 	})
 };
+
+exports.call = function(req, res) {
+	var c = new call();
+	c.makeCall();
+}
 
 exports.thanks = function(req, res) {
 	res.render('thanks');

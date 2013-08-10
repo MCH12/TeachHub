@@ -42,6 +42,7 @@ app.get('/thanksContact', routes.thanksContact);
 app.get('/search', teacher.search);
 app.post('/search', teacher.results);
 app.get('/thanks', teacher.thanks);
+app.post('/call/:number', teacher.call)
 
 
 http.createServer(app).listen(app.get('port'), function(){
