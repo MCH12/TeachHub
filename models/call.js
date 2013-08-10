@@ -5,7 +5,7 @@ module.exports = function( ) {
 		client.makeCall({
 			to: '+447847577561',
 			from: '+441733514667',
-			url: 'http://www.teachhub.co.uk/twiml.xml'
+			url: 'http://www.teachhub.co.uk/twilio.xml'
 		}, function(err,responseData) {
 			console.log(responseData);
 		});
